@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SmartStudy</title>
-    <style>
-        body {
-            width: 200px;
-            text-align: center;
-        }
-        button {
-            margin-top: 20px;
-            padding: 10px;
-        }
-    </style>
+  <title>SmartStudy</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>SmartStudy</h1>
-    <button id="highlight">高亮段落</button>
-
-    <script src="popup.js"></script>
+  <div class="container">
+    <h2>SmartStudy</h2>
+    <div class="controls">
+      <button id="toggleAnnotation">Toggle Annotation Mode</button>
+      <button id="generateTOC">Generate TOC</button>
+      <button id="exportPDF">Export to PDF</button>
+    </div>
+    <div id="summarySection">
+      <h3>AI Summary</h3>
+      <div id="summaryContent"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
 </body>
 </html>
