@@ -1,23 +1,25 @@
 {
-    "manifest_version": 3,
-    "name": "SmartStudy: Dynamic Learning Assistant",
-    "version": "1.0",
-    "description": "A Chrome Extension to enhance learning with AI-powered annotation, summarization, and multilingual support.",
-    "permissions": [
-      "activeTab",
-      "storage"
-    ],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-      }
-    ],
-    "action": {
-      "default_popup": "popup.html"
+  "manifest_version": 3,
+  "name": "SmartStudy",
+  "version": "1.0",
+  "description": "A dynamic learning assistant for easy web content studying",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "downloads"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
     }
+  ],
+  "background": {
+    "service_worker": "background.js"
   }
-  
+}
